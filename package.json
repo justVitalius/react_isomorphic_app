@@ -1,0 +1,33 @@
+{
+  "name": "react-isomorphic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf lib",
+    "watch-js": "./node_modules/.bin/babel webpack_dev_server.js -d lib & ./node_modules/.bin/babel frontend/* -d lib -w & ./node_modules/.bin/babel backend/* -d lib -w",
+    "dev-server": "node lib/webpack_dev_server",
+    "server": "nodemon lib/backend/server",
+    "start": "npm run watch-js & npm run dev-server & npm run server",
+    "build": "npm run clean && npm run watch-js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.2.0",
+    "babel-core": "^6.2.1",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-react": "^6.1.18",
+    "babel-preset-stage-0": "^6.1.18",
+    "express": "^4.13.3",
+    "jade": "^1.11.0",
+    "nodemon": "^1.8.1",
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "react-hot-loader": "^1.3.0",
+    "react-router": "^1.0.0",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
+  }
+}

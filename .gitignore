@@ -1,0 +1,9 @@
+.idea
+
+node_modules
+
+build
+lib
+public
+
+npm-debug.log
