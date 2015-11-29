@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "clean": "rm -rf lib",
-    "watch-js": "./node_modules/.bin/babel webpack_dev_server.js -d lib & ./node_modules/.bin/babel frontend/* -d lib -w & ./node_modules/.bin/babel backend/* -d lib -w",
-    "dev-server": "node lib/webpack_dev_server",
-    "server": "nodemon lib/backend/server",
-    "start": "npm run watch-js & npm run dev-server & npm run server",
-    "build": "npm run clean && npm run watch-js"
+    "clean": "rm -rf build",
+    "build-src": "./node_modules/.bin/babel src -d build -w",
+    "dev-server": "node build/server/webpack_dev_server",
+    "server": "nodemon build/server/server",
+    "start": "npm run build-src & npm run dev-server & npm run server",
+    "build": "npm run clean && npm run build-src"
   },
   "author": "",
   "license": "ISC",

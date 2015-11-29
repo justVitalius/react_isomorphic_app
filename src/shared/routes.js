@@ -1,7 +1,7 @@
 import React from "react";
-import {Main} from "./main";
-import {About} from "./about";
-import {Index} from "./index";
+import {Main} from "./../frontend/main";
+import {About} from "./../frontend/about";
+import {Index} from "./../frontend/index";
 
 export default {
   path: '/',

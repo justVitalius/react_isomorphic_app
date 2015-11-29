@@ -1,13 +1,15 @@
 import express from "express";
 import React from 'react';
 import {renderToString} from "react-dom/server";
-import { match, RoutingContext } from 'react-router'
-import routes from "../frontend/routes";
+import { match } from 'react-router'
+
+
+import routes from "../shared/routes";
 import {Container} from '../frontend/container';
 
 const app = express();
 // set up Jade
-app.set('views', __dirname + '/../../views');
+app.set('views', __dirname + '/../../src/views');
 app.set('view engine', 'jade');
 
 
